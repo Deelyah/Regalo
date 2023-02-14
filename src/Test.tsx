@@ -1,9 +1,9 @@
-import { TextInput } from "./components/inputs/Input";
+import Auth from "./pages/Auth";
 
 const Test = () => {
   return (
     <>
-      <TextInput name="username" label="username" placeholder="username" />
+      <Auth />
     </>
   );
 };

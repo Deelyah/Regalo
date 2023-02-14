@@ -1,7 +1,7 @@
 interface Props {
   submitting?: boolean;
   disabled?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
   btnText: string;
   spinnerTxt?: string;
   style: string;
@@ -19,15 +19,18 @@ const PrimaryButton: React.FC<Props> = ({
     <button
       disabled={submitting || disabled}
       onClick={onClick}
-      className={`${disabled && "cursor-no-drop bg-primary-200"} ${
-        !disabled && "hover:bg-primary-700"
-      } ${style} bg-primary-600 rounded-lg focus:bg-primary-600 focus:shadow-xs focus:shadow-primary-100`}
+      type="submit"
+      className={`${
+        (disabled || submitting) && "cursor-no-drop bg-primary-200"
+      } ${
+        !disabled && !submitting && "hover:bg-primary-700"
+      } ${style} bg-primary-600 rounded-lg focus:bg-primary-600 focus:shadow-xs focus:shadow-primary-100 focus:outline-none`}
     >
       {submitting ? (
-        <div role="status">
+        <div role="status" className="w-full flex justify-center">
           <svg
             aria-hidden="true"
-            className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+            className="w-6 h-6 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-primary-600"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
