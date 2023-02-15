@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, ChangeEvent, ChangeEventHandler, FormEvent } from "react";
 import { LightErrorIcon } from "../icons/Icons";
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
   infoText?: string;
   style?: string;
   onKeyDown?: () => void;
-  onChange?: (e: any) => void;
+  onChange?: (e: FormEvent<HTMLInputElement>) => void;
 }
 
 interface DefaultInputProps extends Props {

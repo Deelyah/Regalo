@@ -27,37 +27,35 @@ const Login = () => {
     }, 2000);
   };
   return (
-    <div className="flex w-full justify-center items-center">
-      <form
-        onSubmit={(e) => {
-          handleSubmit(e);
-        }}
-        className="flex flex-col w-full sm:w-10/12 md:w-1/2 lg:w-1/3  bg-white py-8 px-10 sm:shadow-md"
-      >
-        <DefaultInput
-          style="mb-5"
-          type="email"
-          name="email"
-          label="Email"
-          required={true}
-          placeholder="Email"
-        />
-        <PasswordInput
-          style="mb-5"
-          name="password"
-          label="Password"
-          required={true}
-          placeholder="*******"
-          infoText="Must be at least 7 characters"
-        />
+    <form
+      onSubmit={(e) => {
+        handleSubmit(e);
+      }}
+      className="flex flex-col w-full sm:w-10/12 md:w-1/2 lg:w-1/3  bg-white py-8 px-10 sm:shadow-lg"
+    >
+      <DefaultInput
+        style="mb-5"
+        type="email"
+        name="email"
+        label="Email"
+        required={true}
+        placeholder="Email"
+      />
+      <PasswordInput
+        style="mb-5"
+        name="password"
+        label="Password"
+        required={true}
+        placeholder="*******"
+        infoText="Must be at least 7 characters"
+      />
 
-        <PrimaryButton
-          btnText="Sign Up"
-          style="py-2.5 font-medium text-white"
-          submitting={submitting}
-        />
-      </form>
-    </div>
+      <PrimaryButton
+        btnText="Sign Up"
+        style="py-2.5 font-medium text-white"
+        submitting={submitting}
+      />
+    </form>
   );
 };
 
