@@ -1,6 +1,6 @@
 import { useState } from "react";
-import PrimaryButton from "../components/buttons/PrimaryButton";
-import { DefaultInput, PasswordInput } from "../components/inputs/Input";
+import PrimaryButton from "../../../components/buttons/PrimaryButton";
+import { DefaultInput, PasswordInput } from "../../../components/inputs/Input";
 
 const SignUp = () => {
   interface SignUpState {

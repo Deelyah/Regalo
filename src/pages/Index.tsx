@@ -1,6 +1,5 @@
 import { Logo } from "../components/icons/Icons";
-import { useLocation, Link } from "react-router-dom";
-import SignUp from "../auth/SignUp";
+import { useLocation, Link, Outlet } from "react-router-dom";
 const Auth = () => {
   const path = useLocation().pathname.includes("login");
   return (
@@ -24,7 +23,7 @@ const Auth = () => {
           </p>
         </div>
       </nav>
-      <SignUp />
+      <Outlet />
     </div>
   );
 };

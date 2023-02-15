@@ -1,15 +1,15 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Test from "./Test";
+import { BrowserRouter as Provider, Routes, Route } from "react-router-dom";
+import AppRoutes from "./routes/Index";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/test" element={<Test />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <Provider>
+        <AppRoutes />
+      </Provider>
+      ;
     </div>
   );
 }
