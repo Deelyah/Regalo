@@ -1,22 +1,25 @@
 // import { Outlet } from "react-router-dom";
-import { HomeIcon, CardsIcon } from "../icons";
+import { NavLink } from "react-router-dom";
+import { HomeIcon, CardsIcon, TasksIcon } from "../icons";
 interface Props {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 const SideNavItems = () => {
   const navItems = [
-    { name: "Home", icon: HomeIcon },
-    { name: "Cards", icon: CardsIcon },
-    { name: "Transactions", icon: "icon" },
+    { name: "Dashboard", path: "/app/dashboard", icon: HomeIcon },
+    { name: "Cards", path: "/app/cards", icon: CardsIcon },
+    { name: "Transactions", path: "/app/transactions", icon: TasksIcon },
   ];
   return (
     <ul>
       {navItems.map((item, index) => (
-        <li className="px-3 py-2" key={index}>
-          <div className="flex">
-            <item.icon />
-            <h4>{item.name}</h4>
-          </div>
+        <li key={index}>
+          <NavLink className="px-3 py-2" to={item.path}>
+            <div className="flex">
+              <item.icon />
+              <h4>{item.name}</h4>
+            </div>
+          </NavLink>
         </li>
       ))}
     </ul>
@@ -39,3 +42,5 @@ const Layout: React.FC<Props> = ({ children }) => {
     </div>
   );
 };
+
+export default Layout;
