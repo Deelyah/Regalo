@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, ChangeEventHandler, FormEvent } from "react";
-import { LightErrorIcon } from "../icons/Icons";
+import { LightErrorIcon } from "../icons";
 
 interface Props {
   disabled?: boolean;

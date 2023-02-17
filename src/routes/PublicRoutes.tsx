@@ -1,7 +1,7 @@
 import React from "react";
-import Auth from "../pages/Index";
 import Test from "../Test";
 import AuthRoutes from "../pages/auth/Routes";
+import Auth from "../pages/auth";
 interface RouteSchema {
   path?: string;
   element: React.ReactNode | null;

@@ -1,4 +1,4 @@
-import { Logo } from "../components/icons/Icons";
+import { Logo } from "../../components/icons";
 import { useLocation, Link, Outlet } from "react-router-dom";
 const Auth = () => {
   const path = useLocation().pathname.includes("login");

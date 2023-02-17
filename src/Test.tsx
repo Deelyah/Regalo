@@ -1,4 +1,4 @@
-import Auth from "./pages/Index";
+import Auth from "./pages/auth";
 
 const Test = () => {
   return (
