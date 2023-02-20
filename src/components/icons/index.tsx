@@ -1,5 +1,6 @@
 // LightErrorIcon, DarkErrorIcon, Logo, CardsICon, HomeIcon, ProfileIcon, SettingsIcon, TasksIcon
 
+import { IconProps } from "../../types/Index";
 export const LightErrorIcon = () => {
   return (
     <svg
@@ -85,26 +86,29 @@ export const DarkErrorIcon = () => {
 
 export const Logo = () => {
   return (
-    <svg
-      width="44"
-      height="48"
-      viewBox="0 0 44 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M13.2775 22.3182C14.0998 19.25 17.2537 16.0961 20.322 15.2738L39.4509 10.1474C42.5192 9.32516 44.34 11.1459 43.5177 14.2142L38.3913 33.3432C37.5691 36.4114 34.4152 39.5653 31.3469 40.3876L12.2179 45.514C9.14963 46.3362 7.32888 44.5155 8.15114 41.4472L13.2775 22.3182Z"
-        fill="#9E77ED"
-      />
-      <path
-        d="M5.60881 14.6493C6.43108 11.5811 9.58498 8.42717 12.6533 7.60491L31.7823 2.47854C34.8505 1.65628 36.6713 3.47702 35.849 6.54529L30.7226 25.6743C29.9004 28.7426 26.7465 31.8965 23.6782 32.7187L4.5492 37.8451C1.48093 38.6674 -0.339827 36.8466 0.482438 33.7783L5.60881 14.6493Z"
-        fill="#6941C6"
-      />
-    </svg>
+    <div className="flex items-center">
+      <svg
+        width="44"
+        height="48"
+        viewBox="0 0 44 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.2775 22.3182C14.0998 19.25 17.2537 16.0961 20.322 15.2738L39.4509 10.1474C42.5192 9.32516 44.34 11.1459 43.5177 14.2142L38.3913 33.3432C37.5691 36.4114 34.4152 39.5653 31.3469 40.3876L12.2179 45.514C9.14963 46.3362 7.32888 44.5155 8.15114 41.4472L13.2775 22.3182Z"
+          fill="#9E77ED"
+        />
+        <path
+          d="M5.60881 14.6493C6.43108 11.5811 9.58498 8.42717 12.6533 7.60491L31.7823 2.47854C34.8505 1.65628 36.6713 3.47702 35.849 6.54529L30.7226 25.6743C29.9004 28.7426 26.7465 31.8965 23.6782 32.7187L4.5492 37.8451C1.48093 38.6674 -0.339827 36.8466 0.482438 33.7783L5.60881 14.6493Z"
+          fill="#6941C6"
+        />
+      </svg>
+      <h2 className="text-gray-900 font-semibold text-2xl ml-2">Regalo</h2>
+    </div>
   );
 };
 
-export const CardsIcon = () => {
+export const CardsIcon: React.FC<IconProps> = ({ stroke }) => {
   return (
     <svg
       width="22"
@@ -115,7 +119,7 @@ export const CardsIcon = () => {
     >
       <path
         d="M1 16L11 21L21 16M1 11L11 16L21 11M11 1L1 6L11 11L21 6L11 1Z"
-        stroke="#667085"
+        stroke={stroke}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -124,7 +128,7 @@ export const CardsIcon = () => {
   );
 };
 
-export const HomeIcon = () => {
+export const HomeIcon: React.FC<IconProps> = ({ stroke }) => {
   return (
     <svg
       width="20"
@@ -135,7 +139,7 @@ export const HomeIcon = () => {
     >
       <path
         d="M7 21V11H13V21M1 8L10 1L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8Z"
-        stroke="#667085"
+        stroke={stroke}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -191,7 +195,7 @@ export const SettingsIcon = () => {
   );
 };
 
-export const TasksIcon = () => {
+export const TasksIcon: React.FC<IconProps> = ({ stroke }) => {
   return (
     <svg
       width="21"
@@ -202,7 +206,7 @@ export const TasksIcon = () => {
     >
       <path
         d="M7 9L10 12L20 2M19 10V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H14"
-        stroke="#667085"
+        stroke={stroke}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"

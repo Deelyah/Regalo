@@ -6,12 +6,7 @@ const Auth = () => {
     <div className="min-h-screen w-full bg-gray-50">
       <nav className="flex justify-center fixed left-0 right-0">
         <div className="w-10/12 py-5 flex items-center">
-          <div className="flex items-center">
-            <Logo />
-            <h2 className="text-gray-900 font-semibold text-2xl ml-2">
-              Regalo
-            </h2>
-          </div>
+          <Logo />
           <p className="ml-auto text-gray-400">
             {path ? "Don't" : "Already"} have an account?{" "}
             <Link
