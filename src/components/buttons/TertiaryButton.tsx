@@ -1,5 +1,7 @@
 import { ButtonProps } from "../../types/Index";
-const PrimaryButton: React.FC<ButtonProps> = ({
+
+//This is a secondary button component
+const TertiaryButton: React.FC<ButtonProps> = ({
   submitting,
   disabled,
   onClick,
@@ -13,16 +15,16 @@ const PrimaryButton: React.FC<ButtonProps> = ({
       onClick={onClick}
       type="submit"
       className={`${
-        (disabled || submitting) && "cursor-no-drop bg-primary-200"
+        (disabled || submitting) && "cursor-no-drop bg-white text-gray-200"
       } ${
-        !disabled && !submitting && "hover:bg-primary-700"
-      } ${style} bg-primary-600 rounded-lg focus:bg-primary-600 focus:shadow focus:shadow-primary-100 focus:outline-none text-white`}
+        !disabled && !submitting && "hover:bg-gray-50"
+      } ${style} text-sm bg-white rounded-lg border border-gray-300 focus:bg-white shadow-sm focus:shadow focus:shadow-gray-100 focus:outline-none text-gray-700`}
     >
       {submitting ? (
         <div role="status" className="w-full flex justify-center">
           <svg
             aria-hidden="true"
-            className="w-6 h-6 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-primary-600"
+            className="w-6 h-6 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-primary-50"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -45,4 +47,4 @@ const PrimaryButton: React.FC<ButtonProps> = ({
   );
 };
 
-export default PrimaryButton;
+export default TertiaryButton;

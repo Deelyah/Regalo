@@ -1,10 +1,11 @@
-import { TextInput } from "./components/inputs/Input";
+import Dashboard from "./pages/app/dashboard";
 
 const Test = () => {
   return (
-    <>
-      <TextInput name="username" label="username" placeholder="username" />
-    </>
+    <div className="w-full h-screen flex justify-center items-center">
+      {/* <FirstDashboardSection />{" "} */}
+      <Dashboard />
+    </div>
   );
 };
 export default Test;
