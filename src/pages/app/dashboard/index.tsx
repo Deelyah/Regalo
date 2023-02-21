@@ -4,6 +4,10 @@ import TertiaryButton from "../../../components/buttons/TertiaryButton";
 import BaseCard from "../../../components/cards/BaseCard";
 import { GiftIcon } from "../../../components/icons";
 
+// =========================================================
+// First Section of the dashboard contaning "Welcome, Name"
+// =========================================================
+
 export const FirstDashboardSection = () => {
   return (
     <div className="flex pb-6">
@@ -19,6 +23,10 @@ export const FirstDashboardSection = () => {
     </div>
   );
 };
+
+// =========================================================
+// Second Section of the dashboard contaning the cards for account transactions and gift cards
+// =========================================================
 
 export const SecondDashboardSection = () => {
   return (
@@ -80,6 +88,10 @@ export const SecondDashboardSection = () => {
     </div>
   );
 };
+
+// =========================================================
+// This is to collect all sections of the dashboard for a singular export
+// =========================================================
 
 const Dashboard = () => {
   return (
