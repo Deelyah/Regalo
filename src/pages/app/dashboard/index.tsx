@@ -1,8 +1,10 @@
+import { useState } from "react";
 import PrimaryButton from "../../../components/buttons/PrimaryButton";
 import SecondaryButton from "../../../components/buttons/SecondaryButton";
 import TertiaryButton from "../../../components/buttons/TertiaryButton";
 import BaseCard from "../../../components/cards/BaseCard";
 import { GiftIcon } from "../../../components/icons";
+import TransferFunds from "./TransferFunds";
 
 // =========================================================
 // First Section of the dashboard contaning "Welcome, Name"
@@ -29,6 +31,7 @@ export const FirstDashboardSection = () => {
 // =========================================================
 
 export const SecondDashboardSection = () => {
+  const [displayTransferFunds, setTransferFunds] = useState(false);
   return (
     <div className="flex w-full">
       <div className="px-6 w-3/5">
@@ -42,7 +45,13 @@ export const SecondDashboardSection = () => {
               </h3>
               <p className="text-sm text-gray-400">4455 3344 6767</p>
               <div className="mt-6 flex items-center">
-                <PrimaryButton btnText="Transfer Funds" style="py-2.5 px-4" />
+                <PrimaryButton
+                  btnText="Transfer Funds"
+                  style="py-2.5 px-4"
+                  onClick={() => {
+                    setTransferFunds(true);
+                  }}
+                />
                 <div className="ml-3">
                   <SecondaryButton btnText="Fund Account" style="py-2.5 px-4" />
                 </div>
@@ -55,6 +64,12 @@ export const SecondDashboardSection = () => {
               <h3 className="text-right text-4xl font-semibold">$450,000.00</h3>
             </div>
           </div>
+          <TransferFunds
+            display={displayTransferFunds}
+            onClick={() => {
+              setTransferFunds(false);
+            }}
+          />
         </BaseCard>
       </div>
       <div className="px-6 w-2/5">
