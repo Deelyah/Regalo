@@ -1,7 +1,7 @@
 import { ButtonProps } from "../../types/Index";
 
 //This is a secondary button component
-const SecondaryButton: React.FC<ButtonProps> = ({
+const TertiaryButton: React.FC<ButtonProps> = ({
   submitting,
   disabled,
   onClick,
@@ -15,10 +15,10 @@ const SecondaryButton: React.FC<ButtonProps> = ({
       onClick={onClick}
       type="submit"
       className={`${
-        (disabled || submitting) && "cursor-no-drop bg-primary-200"
+        (disabled || submitting) && "cursor-no-drop bg-white text-gray-200"
       } ${
-        !disabled && !submitting && "hover:bg-primary-100"
-      } ${style} bg-primary-50 rounded-lg focus:bg-primary-50 focus:shadow focus:shadow-primary-100 focus:outline-none text-primary-700`}
+        !disabled && !submitting && "hover:bg-gray-50"
+      } ${style} text-sm bg-white rounded-lg border border-gray-300 focus:bg-white shadow-sm focus:shadow focus:shadow-gray-100 focus:outline-none text-gray-700`}
     >
       {submitting ? (
         <div role="status" className="w-full flex justify-center">
@@ -47,4 +47,4 @@ const SecondaryButton: React.FC<ButtonProps> = ({
   );
 };
 
-export default SecondaryButton;
+export default TertiaryButton;

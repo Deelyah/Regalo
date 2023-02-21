@@ -1,10 +1,11 @@
-import Auth from "./pages/auth";
+import Dashboard from "./pages/app/dashboard";
 
 const Test = () => {
   return (
-    <>
-      <Auth />
-    </>
+    <div className="w-full h-screen flex justify-center items-center">
+      {/* <FirstDashboardSection />{" "} */}
+      <Dashboard />
+    </div>
   );
 };
 export default Test;

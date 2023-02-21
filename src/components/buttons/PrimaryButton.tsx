@@ -16,7 +16,7 @@ const PrimaryButton: React.FC<ButtonProps> = ({
         (disabled || submitting) && "cursor-no-drop bg-primary-200"
       } ${
         !disabled && !submitting && "hover:bg-primary-700"
-      } ${style} bg-primary-600 rounded-lg focus:bg-primary-600 focus:shadow-xs focus:shadow-primary-100 focus:outline-none`}
+      } ${style} bg-primary-600 rounded-lg focus:bg-primary-600 focus:shadow focus:shadow-primary-100 focus:outline-none text-white`}
     >
       {submitting ? (
         <div role="status" className="w-full flex justify-center">

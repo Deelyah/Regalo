@@ -56,7 +56,7 @@ const Layout: React.FC<PropsWithChildren<Props>> = ({ children }) => {
   return (
     <div className="flex">
       <SideNavigation />
-      <div>{children}</div>
+      <div className="p-8 w-full border bg-gray-50">{children}</div>
     </div>
   );
 };

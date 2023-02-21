@@ -1,3 +1,5 @@
+// This route holds all public routes and is used in the index file of this folder to display each route according to user auth
+
 import React from "react";
 import Test from "../Test";
 import AuthRoutes from "../pages/auth/Routes";

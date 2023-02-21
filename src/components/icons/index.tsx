@@ -1,4 +1,4 @@
-// LightErrorIcon, DarkErrorIcon, Logo, CardsICon, HomeIcon, ProfileIcon, SettingsIcon, TasksIcon
+// LightErrorIcon, DarkErrorIcon, Logo, CardsICon, HomeIcon, ProfileIcon, SettingsIcon, TasksIcon, GiftIcon
 
 import { IconProps } from "../../types/Index";
 export const LightErrorIcon = () => {
@@ -207,6 +207,26 @@ export const TasksIcon: React.FC<IconProps> = ({ stroke }) => {
       <path
         d="M7 9L10 12L20 2M19 10V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H14"
         stroke={stroke}
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const GiftIcon = () => {
+  return (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M19 11V21H3V11M11 21V6M11 6H6.5C5.83696 6 5.20107 5.73661 4.73223 5.26777C4.26339 4.79893 4 4.16304 4 3.5C4 2.83696 4.26339 2.20107 4.73223 1.73223C5.20107 1.26339 5.83696 1 6.5 1C10 1 11 6 11 6ZM11 6H15.5C16.163 6 16.7989 5.73661 17.2678 5.26777C17.7366 4.79893 18 4.16304 18 3.5C18 2.83696 17.7366 2.20107 17.2678 1.73223C16.7989 1.26339 16.163 1 15.5 1C12 1 11 6 11 6ZM1 6H21V11H1V6Z"
+        stroke="#7F56D9"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
